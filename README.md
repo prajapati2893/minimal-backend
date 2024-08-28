@@ -3,9 +3,9 @@ Uses sequelize orm
 
 Steps to run:
 
-npm install
-run mysql server
-npx sequelize-cli db:create
-npx sequelize-cli db:migrate
-npx sequelize-cli db:seed:all
-npm start
+npm install <br>
+run mysql server<br>
+npx sequelize-cli db:create<br>
+npx sequelize-cli db:migrate<br>
+npx sequelize-cli db:seed:all<br>
+npm start<br>
