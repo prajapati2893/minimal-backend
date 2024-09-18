@@ -8,20 +8,21 @@ const port = process.env.APP_PORT;
 const server = app.listen(port, () => {
   console.log(`Server is listening on ${port}`);
 });
-const handleExit = async () => {
-  console.log(`\nClosing server...`);
-  server.close(async () => {
-    try {
-      await sequelize.close();
-      console.log("Database connection closed");
-    } catch (e) {
-      console.error(`Error closing database: ${e.message}`);
-    }
-    console.log("Server closed");
-    process.exit(0); // Exit the process with success code
-  });
-};
-
+// const handleExit = async () => {
+//   console.log(`\nClosing server...`);
+//   server.close(async () => {
+//     try {
+//       await sequelize.authenticate();
+//       await sequelize.close();
+//       console.log("Database connection closed");
+//     } catch (e) {
+//       console.error(`${e.message}`);
+//     }
+//     console.log("Server closed");
+//     process.exit(0); // Exit the process with success code
+//   });
+// };
+app.get("/", (req, res) => res.send("A minimal backend is up and running."));
 app.use("/employees", employeeRouter);
 
-process.on("SIGINT", handleExit);
+// process.on("SIGINT", handleExit);

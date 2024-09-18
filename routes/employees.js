@@ -8,7 +8,7 @@ employeeRouter.get("/", (req, res) => {
       res.send(result);
     })
     .catch((err) => {
-      res.send(err);
+      res.send('Error fetching data from db \n' + err);
     });
 });
 

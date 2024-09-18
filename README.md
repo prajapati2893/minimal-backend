@@ -4,7 +4,7 @@ Uses sequelize orm
 Steps to run:
 
 npm install <br>
-run mysql server<br>
+start your sql server<br>
 npx sequelize-cli db:create<br>
 npx sequelize-cli db:migrate<br>
 npx sequelize-cli db:seed:all<br>

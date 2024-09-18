@@ -1,5 +1,5 @@
 "use strict";
-
+// this file is created while npx sequelize-cli init
 const fs = require("fs");
 const path = require("path");
 const Sequelize = require("sequelize");
