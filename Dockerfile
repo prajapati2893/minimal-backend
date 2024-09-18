@@ -1,0 +1,20 @@
+FROM node:20.17.0-bullseye
+
+ARG DB_USERNAME
+ARG DB_PASSWORD
+
+ENV APP_PORT=4000
+ENV DATABASE_HOST=localhost
+ENV DATABASE_PORT=3306
+ENV DATABASE_USERNAME=root
+ENV DATABASE_PASSWORD=rootpassword
+ENV DATABASE_NAME=TEST_DB
+ENV NODE_ENV=development
+
+WORKDIR /minimal-backend
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+EXPOSE 4000
+CMD [ "npm", "start" ]
